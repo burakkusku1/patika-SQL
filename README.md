@@ -1,7 +1,9 @@
 # patika-SQL
 
 [Ödev 1 ](#ödev-1)<br>
-[Ödev 2 ](#ödev-2)
+[Ödev 2 ](#ödev-2)<br>
+[Ödev 3 ](#ödev-3)
+
 
 
 
