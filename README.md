@@ -5,8 +5,8 @@
 [Ödev 3 ](#ödev-3) <br>
 [Ödev 4 ](#ödev-4)<br>
 [Ödev 5 ](#ödev-5)<br>
-[Ödev 6 ](#ödev-6)
-
+[Ödev 6 ](#ödev-6)<br>
+[Ödev 7 ](#ödev-7)
 
 
 
@@ -184,4 +184,40 @@ WHERE rental_rate= 0.99;
 SELECT COUNT(DISTINCT(replacement_cost)) from film 
 WHERE length >150;
 -- 21
+```
+
+## Ödev 7
+
+**film tablosunda bulunan filmleri rating değerlerine göre gruplayınız.**
+
+```SQL
+SELECT rating FROM film
+GROUP BY rating;
+
+```
+
+**film tablosunda bulunan filmleri replacement_cost sütununa göre grupladığımızda film sayısı 50 den fazla olan replacement_cost değerini ve karşılık gelen film sayısını sıralayınız.**
+
+```sql
+SELECT replacement_cost,COUNT(*) FROM film
+GROUP BY replacement_cost
+HAVING COUNT(*)>50;
+```
+
+**3. customer tablosunda bulunan store_id değerlerine karşılık gelen müşteri sayılarını nelerdir**
+
+```SQL
+SELECT store_id,COUNT(customer_id) FROM customer
+GROUP BY store_id;
+
+```
+
+**4. city tablosunda bulunan şehir verilerini country_id sütununa göre gruplandırdıktan sonra en fazla şehir sayısı barındıra country_id bilgisini ve şehir sayısını paylaşınız.**
+
+```SQL
+SELECT country_id,COUNT(city) FROM city
+GROUP BY country_id
+ORDER BY COUNT(city) DESC
+LIMIT 1;
+--country id:44 , count:60 
 ```
